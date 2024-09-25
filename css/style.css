@@ -8,20 +8,76 @@ body {
   min-height: 100vh;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-.credits {
-  color: #777;
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  font-size: 11px;
-  text-align: center;
+@media (max-width: 768px) {
+  :root {
+    font-size: 1.25em;
+  }
 }
 
-.credits a {
-  color: #000;
-  font-weight: bold;
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header p:first-child {
+  color: blue;
+}
+
+.button-sec {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.button-sec button {
+  background-color: white;
+  border: 0px;
+  width: 100px;
+  height: 50px;
+  font-size: 1.2rem;
+}
+.button-sec button:hover {
+  /* background-color: whitesmoke; */
+  border: 1px solid beige;
+  cursor: pointer;
+}
+/* .button-sec button:active {
+  background-color: whitesmoke;
+  border: 2px solid beige;
+  
+} */
+
+.cards-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 20px;
+  isolation: isolate;
+}
+.card {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 15px;
+  cursor: pointer;
+  flex-basis: 250px;
+  min-height: 500px;
+  /* margin: -20px; */
+  /* background-color: blue; */
+}
+
+.card-active {
+  /* z-index: 1; */
+  border: 1px solid blue;
+  box-shadow: 0px 0px 15px black;
+  /* background-color: red; */
+}
+
+.card-active button {
+  background-color: lightblue;
 }
